@@ -1,0 +1,22 @@
+/* 外层容器 (对应 Vue 中的 .home) */
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* 基础子项样式 (对应 Vue 中的 .item) */
+.item {
+  width: 300px;
+  height: 50px;
+  font-size: 16px;
+}
+/* 成功状态修饰符 (对应 Vue 中的 .item .item-success) */
+/* 通常不能拆开 */
+.itemSuccess {
+  color: #52c41a;
+}
+/* 拆开的方法 */
+.item-success {
+  color: #52c41a;
+}

@@ -1,0 +1,71 @@
+.LoginContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fff;
+  width: 400px;
+  border-radius: 35px;
+}
+
+.FormTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    margin: 24px 0 48px;
+  }
+}
+
+.FormContent {
+
+  :global{
+    .ant-form-item {
+      margin-bottom: 16px !important; 
+    }
+    // 方法2：直接在控制台找到这个地方的样式，然后修改 ==》 要放到:global{}里面，不然不会生效
+    :where(.css-dev-only-do-not-override-vrrzze).ant-col-offset-6 {
+      margin-left: 0 !important;
+    }
+  }
+  .ConfirmBtn {
+    display: flex;
+    justify-self: center !important;
+    width: 100%;
+
+    :global {
+      :where(.css-dev-only-do-not-override-vrrzze).ant-form-item {
+       width: 100% !important; 
+      }
+      :where(.css-dev-only-do-not-override-vrrzze).ant-col-18 {
+       max-width: 100% !important; 
+      }
+    }
+  }
+}
+
+.FormBtm {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+
+  margin: 24px 0;
+
+  .btm-txt {
+    height: 16px;
+    font-family: PingFangSC, PingFang SC;
+    font-weight: 500;
+    font-size: 14px;
+    color: #a7b6c5;
+    line-height: 18px;
+    text-align: left;
+    font-style: normal;
+  }
+}
+
+.ant-form-item {
+  margin-bottom: 16px !important;
+}

@@ -1,0 +1,43 @@
+/* 外层容器 (对应 Vue 中的 .home) */
+.container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    overflow: hidden;
+    
+    background: #4a5365;
+    /* background-image: url('/src/assets/background.jpg');
+    background-size: 100% 100%;
+    background-size: cover; */
+
+    display: flex;
+    justify-content: space-between;
+
+    /* .background_img {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: calc(100vw * 860 / 1920);
+        height: calc(100vh * 900 / 1080);
+
+        min-width: 860px;
+        min-height: 900px;
+
+    } */
+
+    .loginBox {
+        z-index: 99;
+
+        /* position: absolute; */
+    }
+    .loginBox {
+        z-index: 99;
+
+        position: absolute;
+        right: 100px;
+        top: 300px;
+    }
+}
