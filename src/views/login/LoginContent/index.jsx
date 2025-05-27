@@ -1,18 +1,25 @@
 import styles from './index.module.scss'
 
 import React from 'react'
-import { Button, Checkbox, Form, Input } from 'antd';
+import { useNavigate } from "react-router-dom"
 
-// const message = 'Hello World';
-
-const onFinish = values => {
-  console.log('Success:', values);
-};
-const onFinishFailed = errorInfo => {
-  console.log('Failed:', errorInfo);
-};
+import { Button, Checkbox, Form, Input } from 'antd'
 
 const LoginContent = () => {
+  // const message = 'Hello World';
+  const navigate = useNavigate();
+  
+  const onFinish = (values) => {
+    // 用于校验填没填的
+    console.log('Success:', values);
+    navigate("/index");
+  };
+  
+  const onFinishFailed = (errorInfo) => {
+    // 好像没作用？？？
+    console.log('Failed:', errorInfo);
+  };
+  
   return (
     <div className={styles.LoginContent}>
       <div className={styles.FormTop}>
