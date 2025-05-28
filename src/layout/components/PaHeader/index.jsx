@@ -1,23 +1,25 @@
 import styles from './index.module.scss'
 
-import React, { useState } from 'react'
+import React from 'react'
 
 import { useNavigate } from "react-router-dom";
 
 import { 
   Space, 
   Dropdown,
-  Button, 
   Modal,
 } from 'antd';
 import {
   HomeOutlined,
-  QuestionCircleOutlined
+  QuestionCircleOutlined,
+  ExclamationCircleFilled,
 } from '@ant-design/icons';
+
 const PaHeader = () => {
   
   const navigate = useNavigate();
 
+  const { confirm } = Modal;
   const items = [
     {
       key: 'account',
@@ -44,22 +46,26 @@ const PaHeader = () => {
   }
 
   const LogOut = () => {
-    showModal()
+    
+    confirm({
+      title: '确认提示',
+      icon: <ExclamationCircleFilled />,
+      content: '您确定要退出登录吗？',
+      okText: '确定',
+      cancelText: '取消',
+      onOk() {
+        console.log('OK');
+        navigate('/login');
+        // setTimeout(() => {
+        //   console.log('navigate');
+        // }, 1000); // 使用 setTimeout 确保路由跳转发生
+      },
+      onCancel() {
+        console.log('Cancel');
+      },
+    });
+    // console.log('confirm', confirm);
   }
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-  const handleOk = () => {
-    setIsModalOpen(false);
-    navigate('/login'); 
-  };
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
-  
 
   return (
     <div className={styles.headerBox}>
@@ -87,18 +93,7 @@ const PaHeader = () => {
         </Space>
         
       </div>
-      
-      <>
-        <Modal
-          title="确认提示"
-          closable={{ 'aria-label': 'Custom Close Button' }}
-          open={isModalOpen}
-          onOk={handleOk}
-          onCancel={handleCancel}
-        >
-          <p>确定要退出登录吗？</p>
-        </Modal>
-      </>
+
     </div>
     
   )

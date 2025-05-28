@@ -12,6 +12,9 @@ import router from './router';
 // 导入antd组件
 // import './plugins/index'
 
+// 导入antd样式
+import '@ant-design/v5-patch-for-react-19';
+
 // 导入项目根组件
 import App from './App';
 
