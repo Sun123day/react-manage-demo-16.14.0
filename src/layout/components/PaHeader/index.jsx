@@ -8,6 +8,7 @@ import {
   Space, 
   Dropdown,
   Modal,
+  Tooltip,
 } from 'antd';
 import {
   HomeOutlined,
@@ -20,6 +21,11 @@ const PaHeader = () => {
   const navigate = useNavigate();
 
   const { confirm } = Modal;
+
+  // 要修改tooltip的文字样式，需要这样修改
+  const homeText = <span style={{color: 'rgba(0, 0, 0, 0.88)'}}>首页</span>
+  const helpText = <span style={{color: 'rgba(0, 0, 0, 0.88)'}}>帮助文档</span>
+
   const items = [
     {
       key: 'account',
@@ -79,9 +85,12 @@ const PaHeader = () => {
       </div>
       <div className={styles.rightBox}>
         <Space>
-          <HomeOutlined/>
-          <QuestionCircleOutlined style={{margin: '0 16px', }} />
-
+          <Tooltip placement="bottomRight" title={homeText} arrow={false} color="#fff">
+            <HomeOutlined />
+          </Tooltip>
+          <Tooltip placement="bottomRight" title={helpText} arrow={false} color="#fff">
+            <QuestionCircleOutlined style={{margin: '0 16px', }} />
+          </Tooltip>
           <Dropdown menu={{ items, onClick }}>
             <a 
               onClick={(e) => e.preventDefault()}
