@@ -2,9 +2,11 @@
   position: relative;
   width: 100%;
   height: 100%;
+  // height: 100vh; // 使用视口高度
   overflow: hidden;
 
   display: flex;
+  background-color: #f0f3f5;
 }
 
 .SideBar {
@@ -13,7 +15,29 @@
   // width: 200px;
   margin-top: 48px;
   position: relative;
+  flex-shrink: 0; // 防止压缩
+}
 
-  overflow: hidden;
-  background-color: #b3bcc0;
+.Content {
+  // width: 100%;
+  // height: 100%;
+  flex: 1; // 占据剩余宽度
+  display: flex;
+  flex-direction: column; // 列布局
+  // overflow: hidden;
+  overflow-y: auto; /* 允许滚动 */
+}
+.NavBar {
+  // width: 100%;
+  margin-top: 48px;
+  flex-shrink: 0; // 防止压缩
+}
+
+.AppMain {
+  // width: 100%;
+  display: flex; 
+  flex: 1; // 占据剩余高度
+  overflow: hidden; // 防止内容溢出
+  
+  margin: 0 16px 16px 16px; /* 添加内边距 */
 }

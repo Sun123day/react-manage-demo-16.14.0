@@ -1,0 +1,8 @@
+.appMain {
+  position: relative;
+  flex-grow: 1;
+  // height: 100%; /* 确保高度100% */
+  overflow: auto; /* 允许内容滚动 */
+  background-color: #fff;
+  padding: 16px;
+}
