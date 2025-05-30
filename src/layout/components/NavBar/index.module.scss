@@ -1,5 +1,18 @@
+:global {
+  .ant-breadcrumb-separator {
+    color: #c0c4cc !important;
+    font-weight: 700 !important
+  }
+  // 第一个.ant-breadcrumb-link设置colorrgba(0, 0, 0, 0.88)，font-weight: 700;
+  .ant-breadcrumb li:first-child {
+    color: rgba(0, 0, 0, 0.88) !important;
+    font-weight: 700 !important 
+  }
+  
+}
 .navBarContent {
   height: 32px;
+  line-height: 32px;
   margin: 8px 16px;
 
   background: #fff;
