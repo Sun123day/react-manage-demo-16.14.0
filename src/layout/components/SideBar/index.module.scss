@@ -1,0 +1,82 @@
+:global {
+  .ant-tooltip {
+    min-width: 160px !important;
+  }
+  .ant-tooltip .ant-tooltip-arrow {
+    display: none !important;
+  }
+  // 隐藏一级菜单显示【对目录下的菜单无影响】
+  // ===》二级菜单下的显示好像本就是好的
+  // 设置隐藏的话二级也不会隐藏
+  // ===》二级菜单确实不会受到影响
+  .ant-tooltip .ant-tooltip-content {
+    display: none !important;
+  }
+  // 修改一级菜单的显示
+   // ===》二级菜单不会受到影响
+  // .ant-tooltip .ant-tooltip-inner {
+  //  background-color: #fff !important; 
+  //  color: rgba(0, 0, 0, 0.88) !important;
+  // }
+
+  // 修改svg的固定大小
+  .ant-menu .ant-menu-item .ant-menu-item-icon svg, 
+  .ant-menu .ant-menu-submenu-title .ant-menu-item-icon svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  
+  // 修改侧边栏菜单padding
+  .ant-menu-item {
+    padding-left: 12px !important;
+    padding-right: 20px !important;
+  }
+  .ant-menu-submenu-title {
+    padding-left: 12px !important;
+    padding-right: 20px !important;
+  }
+  .ant-menu-item-only-child {
+    padding-left: 40px !important;
+  }
+
+  .ant-menu .ant-menu-title-content {
+    transition: none !important; 
+  }
+  .ant-menu .ant-menu-submenu-expand-icon, 
+  .ant-menu .ant-menu-submenu-arrow,
+  .ant-menu .ant-menu-submenu-arrow::before,
+  .ant-menu .ant-menu-submenu-arrow::after {
+    transition: none !important;
+  }
+}
+.SideBarContent {
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  // width: 100%;
+  .SideBarMenu {
+    height: 100%; 
+    width: 100%;
+  }
+  .tool {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    // width: 100%;
+    height: 46px;
+    line-height: 46px;
+    
+    background-color: #fff;
+    border-top: 1px solid #ebeef0;
+
+    .collapseBtn {
+      margin-left: 20px;
+      font-size: 20px;
+    }
+  }
+}
