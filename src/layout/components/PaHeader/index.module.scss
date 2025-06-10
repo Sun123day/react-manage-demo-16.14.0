@@ -18,25 +18,26 @@
     display: flex;
     align-items: center;
     margin-left: 20px;
+    height: 26px;
 
     .mainLogoName {
       margin-left: 10px;
-      height: 25px;
+      height: 26px;
       font-family: PingFangSC, PingFang SC;
       font-weight: 700;
       font-size: 14px;
       color: #19272e;
-      line-height: 25px;
+      line-height: 26px;
       text-align: left;
       font-style: normal;
     }
     .subLogoName {
-      height: 25px;
+      height: 26px;
       font-family: PingFangSC, PingFang SC;
       font-weight: 500;
       font-size: 14px;
       color: #19272e;
-      line-height: 25px;
+      line-height: 26px;
       text-align: left;
       font-style: normal;
     }
@@ -45,5 +46,7 @@
     display: flex;
     align-items: center; 
     margin-right: 16px;
+
+    cursor: pointer;
   }
 }

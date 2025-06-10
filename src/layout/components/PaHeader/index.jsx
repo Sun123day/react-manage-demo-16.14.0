@@ -16,8 +16,24 @@ import {
   ExclamationCircleFilled,
 } from '@ant-design/icons';
 
+import antdSvg from '../../../assets/antd.svg'
+import reactSvg from '../../../assets/react.svg'
+
 const PaHeader = () => {
-  
+  const antdLogo = (
+    <img src={antdSvg} alt="logo" style={{height: '24px'}} />
+  )
+
+  const reactLogo = (
+    <img src={reactSvg} alt="logo" style={{height: '24px', marginLeft: '8px'}} />
+  )
+
+  const subLogo = (
+    <div style={{fontSize: '16px'}}>
+      ❤️♠️
+    </div>
+  )
+
   const navigate = useNavigate();
 
   const { confirm } = Modal;
@@ -76,9 +92,10 @@ const PaHeader = () => {
   return (
     <div className={styles.headerBox}>
       <div className={styles.leftBox}>
-      ❤️
-      <div style={{width: 1, height: 25, background: '#b3bcc0', margin: '0 10px'}} />
-      ♠️
+      {antdLogo}
+      {reactLogo}
+      <div style={{width: 1, height: 16, background: '#b3bcc0', margin: '0 10px'}} />
+      {subLogo}
       <div className={styles.mainLogoName}>这个是主logo名称</div>
       <div style={{width: 1, height: 16, background: '#b3bcc0', margin: '0 10px'}} />
       <div className={styles.subLogoName}>这个是副logo名称</div>
@@ -94,7 +111,7 @@ const PaHeader = () => {
           <Dropdown menu={{ items, onClick }}>
             <a 
               onClick={(e) => e.preventDefault()}
-              style={{marginRight: '16px', }}
+              style={{marginRight: '16px', userSelect: 'none' }}
             >
               这是昵称
             </a>

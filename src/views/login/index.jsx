@@ -5,14 +5,11 @@ import LoginContent from './LoginContent/index.jsx';
 const Login = () => {
   return (
     <div className={styles.container}>
-      {/* <img 
-        src="/src/assets/background.jpg" 
-        alt=""
-        className={styles.background_img}
-      /> */}
+      {/* 左上角logo */}
       <div className={styles.logoBox}>
         <LogoContent />
       </div>
+      {/* 登录表单 */}
       <div className={styles.loginBox}>
         <LoginContent />
       </div>

@@ -30,7 +30,7 @@ export const rawItems = [
   },
   {
     key: 'sub1',
-    label: '目录1',
+    label: '系统管理',
     icon: <MailOutlined />,
     children: [
       { key: '2', label: '用户管理', path: routePath.SYSTEM_MENU1 },
