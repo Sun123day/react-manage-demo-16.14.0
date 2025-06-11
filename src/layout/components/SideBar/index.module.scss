@@ -51,7 +51,12 @@
   .ant-menu .ant-menu-submenu-arrow::after {
     transition: none !important;
   }
+
+  :where(.css-dev-only-do-not-override-vrrzze).ant-menu-inline-collapsed-tooltip {
+    display: none!important;
+  }
 }
+
 .SideBarContent {
   position: relative;
   
