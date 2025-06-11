@@ -1,17 +1,20 @@
 :global {
-  .ant-tooltip {
-    min-width: 160px !important;
-  }
-  .ant-tooltip .ant-tooltip-arrow {
-    display: none !important;
-  }
+  // 这1/3是会隐藏目录的悬浮框，但是会隐藏修改头部导航栏的悬浮框
+  // .ant-tooltip {
+  //   min-width: 160px !important;
+  // }
+  // 这2/3是会隐藏目录的悬浮框，但是会隐藏修改头部导航栏的悬浮框
+  // .ant-tooltip .ant-tooltip-arrow {
+  //   display: none !important;
+  // }
   // 隐藏一级菜单显示【对目录下的菜单无影响】
   // ===》二级菜单下的显示好像本就是好的
   // 设置隐藏的话二级也不会隐藏
   // ===》二级菜单确实不会受到影响
-  .ant-tooltip .ant-tooltip-content {
-    display: none !important;
-  }
+  // 这3/3是会隐藏目录的悬浮框，但是会隐藏修改头部导航栏的悬浮框
+  // .ant-tooltip .ant-tooltip-content {
+  //   display: none !important;
+  // }
   // 修改一级菜单的显示
    // ===》二级菜单不会受到影响
   // .ant-tooltip .ant-tooltip-inner {
